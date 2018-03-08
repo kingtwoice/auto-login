@@ -1,0 +1,26 @@
+<!doctype html>  
+<html>  
+  <head>  
+    <title>AutoFill</title>  
+    <style>  
+      body {  
+        min-width: 100px;  
+        overflow-x: hidden;  
+      }  
+     
+      </style>  
+<script src="jquery.min.js"></script>
+<script src="local.js"></script>
+<script src="base64.js"></script>
+<script src="crypto-js.js"></script>
+      </head>  
+      <body>  
+用户名:<input type="text" placeholder="用户名" id="X" width=100px></br>
+密码:<input type="password" placeholder="密码" id="y" width=100px></br>
+<button type="button" id="btn">保存</button><br>
+授权码:<input type="text" placeholder="授权码" id="m" width=70px><button type="button" id="btn_save">保存</button><br>
+剩余时间:<span style="color:red" id="T"></span>
+<div id="drag" style="width:150px;height:40px;border:1px solid #F00">拖拽密保卡txt文件至此</div><br>
+<button type="button" id="onoff">开启</button>
+</body>  
+</html>  

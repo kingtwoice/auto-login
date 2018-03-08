@@ -1,0 +1,25 @@
+﻿{  
+  "name": "Autologin",  
+  "version": "2.1",  
+ "manifest_version": 2,  
+  "description": "自动填写xxx后台帐号、密码、密保卡数值",  
+  "browser_action": {  
+    "default_icon": "icon.png" ,
+    "default_title": "Autologin all rights reserved by kingtwoice",
+    "default_popup": "popup.html"
+  },  
+ "content_scripts": [{  
+         "matches": ["http://mmm.xxx.cn/","http://mmm.xxx.com/","http://mmm.xxx.cn/index.php","http://mmm.xxx.com/index.php"],   
+         "js": ["popup.js","jquery.min.js","crypto-js.js"],   
+         "run_at": "document_start",  
+         "all_frames": true   
+    }],
+"permissions": [     
+     "tabs", "http://mmm.xxx.cn/*","http://mmm.xxx.com/*"    
+    ],
+"content_security_policy": "script-src 'self' https://sapi.k780.com; object-src 'self'",
+  "background": {
+    "scripts": ["background.js","base64.js","crypto-js.js"],    
+    "persistent": true
+  }   
+}
